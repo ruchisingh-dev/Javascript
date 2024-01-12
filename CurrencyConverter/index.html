@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CurrencyConverter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="flex items-center justify-center text-center  min-h-screen bg-fuchsia-400 ">
+    <div class="px-5 py-7 rounded-md flex flex-col bg-white min-w-fit">
+        <h1 class="text-3xl font-bold mb-7 text-emerald-600">Currency converter</h1>
+        <form class="">
+            <div class="Amount ">  
+                <input type="text" placeholder="Enter Amount"  name="" id="" class="px-3 py-2 border-2 border-slate-500 rounded">
+            </div>
+            <div class="dropdown flex justify-center items-center gap-6">
+                <div class="from flex flex-col">
+                    <p>From</p>
+                    <div class="select-container flex">
+                        <img src="https://flagsapi.com/US/flat/64.png" class="">
+                        <select name="from" id="" class="">
+                            <option value="USD">USD</option>
+                            <option value="INR">INR</option>
+                            <option value="EUR">EUR</option>
+                            <option value="AUD">AUD</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </div>
+               
+                <div class="to flex flex-col">
+                    <p>To</p>
+                    <div class="select-container flex">
+                        <img src="https://flagsapi.com/IN/flat/64.png">
+                        <select name="from" id="" class="">
+                            <option value="USD">USD</option>
+                            <option value="INR" selected>INR</option>
+                            <option value="EUR">EUR</option>
+                            <option value="AUD">AUD</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="msg">1USD = 80INR</div>
+            <button class="border-2 border-slate-600 rounded">Get Exchange Rate</button>
+        </form>
+    </div>
+</body>
+</html>
