@@ -1,4 +1,4 @@
-const COUNTRY_CODES = {
+ const country_codes = {
   AED: "AE",
   AFN: "AF",
   XCD: "AG",
