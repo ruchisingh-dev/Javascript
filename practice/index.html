@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- <script src="script.js" defer></script> -->
     <!-- <script src="script2.js" defer></script> -->
     <script src="fetchAPI.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- <script src="objectLiterals.js"></script> -->
     <!-- <script src="destucturing.js"></script> -->
-</head>
-<body>
-    <h1>Facts</h1>
-    <button id="btn">getFacts</button>
-    <p id="fact"></p>
-</body>
+  </head>
+  <body class="bg-gray-900 min-h-screen">
+  <body class="bg--950 min-h-screen">
+    <main class="my-12 flex flex-col gap-3 justify-center items-center">
+        <h1 class="text-4xl text-center text-white font-bold">Cat Facts</h1>
+        <button id="btn" class="bg-purple-400 px-3 py-1 rounded">See Fact</button>
+        <p id="fact" class="text-white text-lg max-w-sm"></p>
+    </main>
+  </body>
 </html>

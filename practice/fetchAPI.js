@@ -1,43 +1,42 @@
-// fetch API
-// API - application programming interface
+// API URL - Application programming interface works as a mediator between client and server
 const URL = "https://cat-fact.herokuapp.com/facts";
-// if we cannot put any option in fetch method is default set by "GET request"
-// let promise = fetch(URL);
-// console.log(promise);
+
+// Selecting HTML elements
 const factPara = document.querySelector("#fact");
 const btn = document.querySelector("#btn");
 
-// const getFacts = async () => {
-//     console.log("getting data.....");
-//     let response = await fetch(URL); // response is an object
-//     console.log(response);// JSON formate
-//     let data = await response.json()
-//     // console.log(data[0].text);
-//     factPara.innerHTML = data[3].text;
+//***  Function to fetch cat facts and update the HTML element ***
+// async function getFacts() {
+//     factPara.innerHTML = "Loading..."
+//   try {
+//     // Fetching the API and converting data to a JSON object for use in JavaScript
+//     const response = await fetch(URL);
+
+//     const data = await response.json(); // Convert the response to a JSON object
+//     factPara.innerHTML = data[Math.floor(Math.random() * 5)].text; // Display a specific cat fact in the HTML element
+//   } catch (error) {
+//     console.error("Error fetching data:", error.message);
+//   }
 // }
 
-// PROMISE CHANING
-
+//***  Function to fetch cat facts and update the HTML element ***
 function getFacts() {
-    fetch(URL)
-    .then((reponse) => {
-        return reponse.json();
-    }).then((data) => {
-        console.log(data)
-        factPara.innerHTML = data[3].text;
-    })
+  // Fetching the API and converting data to a JSON object for use in JavaScript
+  factPara.innerHTML = "Loading...";
+  fetch(URL)
+    .then((reponse) => reponse.json())
+    .then((data) => {
+      const randomNum = Math.floor(Math.random() * 5);
+      factPara.innerHTML = data[randomNum].text;
+    });
 }
 
-
+// Event listener for the button click
 btn.addEventListener("click", getFacts);
 
-// Understanding Terms
-// AJAX is Asynchronous JS & XML
-// JSON is Javascript Object Notation
-// response comes in JSON formate
-// we have to comvert it into JS object
-// we use json() method to do this -> returns a second promise
-
-
-
-
+// Understanding Terms:
+// - AJAX stands for Asynchronous JavaScript & XML.
+// - JSON stands for JavaScript Object Notation.
+// - The response from the API comes in JSON format, and we use the json() method to convert it into a JavaScript object.
+// - The fetch() function returns a promise that resolves to the Response object representing the completion or failure of the request.
+// - We chain promises using the then() method to handle the asynchronous flow of data.
